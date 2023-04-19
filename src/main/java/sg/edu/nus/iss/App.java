@@ -29,7 +29,7 @@ public class App
         BankAccount[] accts = new BankAccount[n];
         for (int i = 0; i < accts.length; i++) {
             float min = 1000.00f;
-            float max = 1000000.00f;
+            // float max = 1000000.00f;
             Random randNum = new Random();
             float initialBalance = min + randNum.nextFloat() * 1000;
 
@@ -42,7 +42,8 @@ public class App
         acct2.showAccount();
         acct2.deposit(30f);
         acct2.showAccount();
+        System.out.println("The current balance is: " + acct2.getBalance());
         acct2.setDuration(20);
-        acct2.setDuration(10);
+        acct2.setDuration(10); // should expect IllegalArgumentException error
     }
 }

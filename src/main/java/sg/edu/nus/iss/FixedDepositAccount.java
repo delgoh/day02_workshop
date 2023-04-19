@@ -30,16 +30,19 @@ public class FixedDepositAccount extends BankAccount {
 
     @Override
     public void deposit(float amt) {
+        System.out.println("Deposit function not allowed.");
     }
 
     @Override
     public void withdraw(float amt) {
+        System.out.println("Deposit function not allowed.");
     }
 
     @Override
     public float getBalance() {
-        return super.getBalance() + this.interest;
+        return super.getBalance() * (1 + (this.interest / 100));
     }
+
     public float getInterest() {
         return interest;
     }
