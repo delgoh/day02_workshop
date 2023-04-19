@@ -6,7 +6,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
         BankAccount acct1 = new BankAccount("John Doe", 0);
 
         System.out.println(acct1.getBalance());
@@ -37,5 +36,13 @@ public class App
             accts[i] = new BankAccount("Employee " + String.valueOf(i), initialBalance);
             accts[i].showAccount();
         }
+
+        FixedDepositAccount acct2 = new FixedDepositAccount("Jane Doe", 354.8f, 80);
+
+        acct2.showAccount();
+        acct2.deposit(30f);
+        acct2.showAccount();
+        acct2.setDuration(20);
+        acct2.setDuration(10);
     }
 }
